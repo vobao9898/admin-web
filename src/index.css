@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: "Google Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+    }
+}
+
+body {
+    background: rgb(239 246 255);
+}
+
+.ant-switch {
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+.ant-modal-header {
+    padding: 16px 24px;
+    color: rgba(0, 0, 0, 0.85);
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+}
+
+.ant-modal-footer {
+    padding: 10px 16px;
+    text-align: right;
+    background: transparent;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 2px 2px;
+}
+
+.ant-modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    padding: 0 !important;
+}
+
+.ant-modal-content .ant-modal-body {
+    padding: 16px;
+}
+
+.ant-btn-primary {
+    background-color: #1677ff !important;
+}
+
+.ant-select-selection-item {
+    font-size: 14px;
+}
+
+.device > div {
+    width: 100%;
+}
+
+.ant-select-selection-placeholder,
+.ssn-css::-webkit-input-placeholder {
+    color: #a2a7b2 !important;
+}
+
+.ant-select-disabled:where(.css-dev-only-do-not-override-14wwjjs).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    color: #000000e0;
+}
+
+.disabled:disabled {
+    color: #000000e0;
+}
+
+.disabled > div > input {
+    color: #000000e0 !important;
+    font-size: 14px !important;
+}
+
+.ant-popconfirm-message-icon {
+    display: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #a2a7b2 !important;
+    font-weight: 400;
+    font-size: 14px !important;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #a2a7b2 !important;
+    font-weight: 400;
+}
+
+select::-webkit-input-placeholder {
+    color: #a2a7b2 !important;
+    font-weight: 400;
+}
+
+.ant-select-selection-placeholder {
+    font-size: 14px !important;
+}
+
+.ant-picker-input > input {
+    font-size: 14px !important;
+    line-height: 25px !important;
+}
+
+.ssn-css {
+    font-size: 14px;
+    line-height: 24px !important;
+}

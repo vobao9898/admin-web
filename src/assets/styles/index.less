@@ -1,0 +1,98 @@
+@import '../fonts/stylesheet.css';
+
+@import '~antd/lib/style';
+
+@import '~antd/lib/popconfirm/style';
+@import '~antd/lib/popover/style';
+@import '~antd/lib/table/style';
+@import '~antd/lib/dropdown/style';
+@import '~antd/lib/checkbox/style';
+@import '~antd/lib/form/style';
+@import '~antd/lib/select/style';
+@import '~antd/lib/transfer/style';
+@import '~antd/lib/date-picker/style';
+@import '~antd/lib/switch/style';
+@import '~antd/lib/slider/style';
+@import '~antd/lib/tabs/style';
+@import '~antd/lib/tree-select/style';
+@import '~antd/lib/progress/style';
+@import '~antd/lib/modal/style';
+@import '~antd/lib/button/style';
+@import '~antd/lib/tooltip/style';
+@import '~antd/lib/steps/style';
+@import '~antd/lib/collapse/style';
+@import '~antd/lib/radio/style';
+@import '~antd/lib/spin/style';
+@import '~antd/lib/tree/style';
+@import '~antd/lib/upload/style';
+@primary-color: #3b82f6;
+
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+@import '~glightbox/dist/css/glightbox.css';
+@import '~line-awesome/dist/line-awesome/css/line-awesome.css';
+
+@import '/src/components';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans,
+    Helvetica Neue, sans-serif;
+  @apply text-sm overflow-x-hidden text-gray-500 bg-blue-50;
+  .swal2-close:focus {
+    @apply shadow-none;
+  }
+}
+* > {
+  .loop-intro-x(9);
+}
+
+.loop-intro-x(@counter) when (@counter > 0) {
+  .loop-intro-x((@counter - 1)); // next iteration
+  .intro-x:nth-child(@{counter}) {
+    @apply translate-x-12;
+  }
+  .-intro-x:nth-child(@{counter}) {
+    @apply -translate-x-12;
+  }
+  .-intro-x:nth-child(@{counter}),
+  .intro-x:nth-child(@{counter}) {
+    opacity: 0;
+    z-index: (10 - @counter);
+    animation: intro-x-animation 0.4s ease-in-out 0.33333s;
+    animation-fill-mode: forwards;
+    animation-delay: ~'0.@{counter}s';
+  }
+}
+
+@keyframes intro-x-animation {
+  to {
+    @apply opacity-100 -translate-x-0;
+  }
+}
+
+.ant-btn {
+  @apply border border-gray-300 text-sm rounded-lg mr-2 px-2;
+
+  &.ant-btn-primary {
+    @apply bg-blue-500 text-white;
+  }
+}
+.ant-picker-panel-container .ant-picker-panels {
+  @apply overflow-auto ~'max-w-[560px] w-[90vw]';
+}
+
+.ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  color: gray;
+  font-weight: 400;
+  background-color: #ededed !important;
+}
+
+.ant-switch {
+  background: rgba(0, 0, 0, 0.25);
+}
+.ant-switch-checked {
+  background-color: #3b82f6 !important;
+}

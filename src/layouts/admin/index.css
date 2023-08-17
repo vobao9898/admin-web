@@ -1,0 +1,61 @@
+.hamburger {
+    display: inline-block;
+    right: 20px;
+    position: absolute;
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    cursor: pointer;
+    width: 28px;
+}
+
+.is-active {
+    left: 100px;
+}
+
+.line {
+    background: #6b7280;
+    display: block;
+    transition: all;
+    transition: 0.3s;
+    border-radius: 2px;
+    height: 4px;
+    margin: 5px 0px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.line:nth-child(3) {
+    width: 15px;
+}
+
+.hamburger:hover .line:nth-child(3) {
+    width: 30px;
+}
+
+.hamburger.is-active .line:nth-child(1) {
+    height: 0.25rem;
+    width: 0.875rem;
+    transform: translateX(20px) rotate(45deg) translateY(5px);
+}
+
+.hamburger.is-active .line:nth-child(3) {
+    height: 0.25rem;
+    width: 0.875rem;
+    transform: translateX(20px) rotate(-45deg) translateY(-5px);
+}
+
+.hamburger.is-active .line{
+    background-color: #3b82f6;
+}
+
+@media (max-width: 767px) {
+    .hambuger {
+        right: -28px;
+    }
+}
+
+.hambuger.is-active {
+    right: -48px;
+}

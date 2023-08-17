@@ -1,0 +1,50 @@
+import IBusiness from "./IBusiness";
+import IGeneral from "./IGeneral";
+import IHandlingActivityId from "./IHandlingActivityId";
+import IPrincipal from "./IPrincipal";
+import IState from "./IState";
+import IBusinessBank from "./IBusinessBanks";
+import IAdminUser from "./IAdminUser";
+import IBankInfo from "./IBankInfo";
+
+interface IMerchant {
+    merchantId: number;
+    merchantCode: string;
+    businessName: string;
+    type: string;
+    principals: IPrincipal[];
+    email: string;
+    phone: string;
+    cellPhone: string;
+    status: number;
+    expiredDate: Date;
+    isDisabled: number;
+    createdDate: string;
+    password: string;
+    general: IGeneral;
+    businessBank: IBusinessBank;
+    handlingActivities: IHandlingActivityId[];
+    state: IState;
+    zip: number;
+    business: IBusiness[];
+    adminUser: IAdminUser;
+    reason: string;
+    isApproved: number;
+    isRejected: number;
+    transactionsFee: number;
+    discountRate: number;
+    isWareHouse: boolean;
+    bankInfo: IBankInfo;
+    pointRate: string;
+    turnAmount: string;
+    timezone: string;
+    isCashDiscount: boolean;
+    isTop: boolean;
+    isTest: boolean;
+    disabledReason: string;
+    cashDiscountPercent: string;
+    merchantToken: string;
+    totalAmountLimit: string;
+}
+
+export default IMerchant;

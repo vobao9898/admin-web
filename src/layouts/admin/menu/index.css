@@ -1,0 +1,35 @@
+.menu > li {
+    cursor: pointer;
+}
+
+.menu .ant-collapse-header {
+    display: flex !important;
+    padding: 4px 16px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.menu .child-item {
+    padding-left: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.menu .child-item::before {
+    margin-right: 1.25rem;
+    background-color: #3b82f6;
+    transition-property: all;
+    height: 0.125rem;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0.25rem;
+}
+
+.menu .child-item::before {
+    content: "";
+    width: 8px;
+}
+
+.menu .child-item:hover::before {
+    width: 16px;
+}
